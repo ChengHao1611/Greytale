@@ -24,56 +24,63 @@ define config.check_conflicting_properties = True
 ## 介面中文字的顏色
 
 ## 整個介面中使用的強調色，用於標記和突出顯示文字
-define gui.accent_color = '#0099cc'
+define gui.accent_color = u'#ffffff'
 
 ## 當文字按鈕既未被選取也未被懸停時所使用的顏色
-define gui.idle_color = '#888888'
-
+define gui.idle_color = u'#FFFFFF'
 ## 小顏色適用於小文本，需要更亮/更暗才能達到與普通文本相同的效果
-define gui.idle_small_color = '#aaaaaa'
+define gui.idle_small_color = u'#FFFFFF'
 
 ## 用於懸停的按鈕和欄的顏色
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = u'#FFF200'
 
 ## 當文字按鈕被選取但未獲得焦點時所使用的顏色。如果按鈕是目前畫面或首選項值，則
 ## 按鈕將被選取
-define gui.selected_color = '#ffffff'
+define gui.selected_color = u'#ffffff'
 
 ## 無法選擇文字按鈕時使用的顏色
-define gui.insensitive_color = '#8888887f'
+define gui.insensitive_color = u'#8888887f'
 
 ## 顏色用於未填充的條形部分。這些顏色不直接使用，而是在重新生成條形圖像檔案時使
 ## 用
-define gui.muted_color = '#003d51'
-define gui.hover_muted_color = '#005b7a'
+define gui.muted_color = u'#3d5166'
+define gui.hover_muted_color = u'#5b7a99'
 
 ## 用於對話和選單選擇文字的顏色
-define gui.text_color = '#ffffff'
-define gui.interface_text_color = '#ffffff'
+define gui.text_color = u'#ffffff'
+define gui.interface_text_color = u'#ffffff'
 
 
 ## 字形和字形大小 #####################################################################
 
 ## 用於遊戲內文字的字形
-define gui.text_font = "SourceHanSansLite.ttf"
+define gui.text_font = "fonts/Cubic_11_1.010_R.ttf"
 
 ## 用於角色名稱的字形
-define gui.name_text_font = "SourceHanSansLite.ttf"
+define gui.name_text_font = "fonts/Cubic_11_1.010_R.ttf"
 
 ## 用於遊戲外文本的字形
-define gui.interface_text_font = "SourceHanSansLite.ttf"
+define gui.interface_text_font = "fonts/Cubic_11_1.010_R.ttf"
+
+#目前尚未搞懂
+define gui.textbutton_text_font = "fonts/Cubic_11_1.010_R.ttf"
+define gui.navigation_button_text_font = "fonts/Cubic_11_1.010_R.ttf"
+define gui.quick_button_text_font = "fonts/Cubic_11_1.010_R.ttf"
+define gui.confirm_button_text_font = "fonts/Cubic_11_1.010_R.ttf"
+define gui.choice_button_text_font = "fonts/Cubic_11_1.010_R.ttf"
+define gui.game_menu_button_text_font = "fonts/Cubic_11_1.010_R.ttf"
 
 ## 正常對話文字的大小
-define gui.text_size = 33
+define gui.text_size = 40
 
 ## 角色名稱的大小
-define gui.name_text_size = 45
+define gui.name_text_size = 55
 
 ## 遊戲用戶介面中的文字的大小
-define gui.interface_text_size = 33
+define gui.interface_text_size = 40
 
 ## 遊戲用戶介面中標籤的大小
-define gui.label_text_size = 36
+define gui.label_text_size = 40
 
 ## 通知螢幕上的文字大小
 define gui.notify_text_size = 24
@@ -81,10 +88,28 @@ define gui.notify_text_size = 24
 ## 遊戲標題的大小
 define gui.title_text_size = 75
 
+#待修改，翻譯內容
+# translate English style default:
+#     font "fonts/DTM-Mono.otf"
+
+# translate English python:
+#     gui.text_font = "fonts/DTM-Mono.otf"
+#     gui.name_text_font = "fonts/DTM-Sans.otf"
+#     gui.interface_text_font = "fonts/DTM-Mono.otf"
+#     gui.navigation_button_text_font = "fonts/DTM-Sans.otf"
+#     gui.quick_button_text_font = "fonts/DTM-Sans.otf"
+#     gui.confirm_button_text_font = "fonts/DTM-Sans.otf"
+#     gui.choice_button_text_font = "fonts/DTM-Sans.otf"
+#     gui.button_text_font = "fonts/DTM-Sans.otf"
+#     gui.title_text_size = 45
+#     gui.text_size = 35
+
 
 ## 主選單和遊戲選單 ####################################################################
 
 ## 用於主選單和遊戲選單的圖像
+define gui.demo_stamp= "gui/demo.png"
+define gui.font_title= "gui/FONT.png"
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
 
@@ -103,7 +128,7 @@ define gui.textbox_yalign = 1.0
 ## 對話角色的名字相對於文本框的位置。這些可以是從左側或頂部開始的整數像素，也可
 ## 以是到中心的 0.5 個像素
 define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_ypos = -10
 
 ## 角色名稱的水平對齊方式。左對齊可以為 0.0，居中對齊可以為 0.5，右對齊可以為
 ## 1.0
@@ -122,11 +147,11 @@ define gui.namebox_tile = False
 
 ## 對話相對於文本框的位置。這些可以是相對於文字方塊左側或頂部的整數像素，或相對
 ## 於中心的 0.5 個像素
-define gui.dialogue_xpos = 402
-define gui.dialogue_ypos = 75
+define gui.dialogue_xpos = 400
+define gui.dialogue_ypos = 90
 
 ## 對話文字的最大寬度，以像素為單位
-define gui.dialogue_width = 1116
+define gui.dialogue_width = 1000
 
 ## 對話文字的水平對齊方式。左對齊可以為 0.0，居中對齊可以為 0.5，右對齊可以為
 ## 1.0
@@ -191,17 +216,17 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## 選擇按鈕用於遊戲內選單
 
-define gui.choice_button_width = 1185
+define gui.choice_button_width = 500
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
+define gui.choice_button_borders = Borders(10, 10, 10, 10)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#888888'
+define gui.choice_button_text_yalign = 1.0
+define gui.choice_button_text_idle_color = u'#ffffff'
 define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#8888887f'
-
+define gui.choice_button_text_insensitive_color = u'#ffffff'
 
 ## 存檔槽按鈕 #######################################################################
 ##
@@ -241,10 +266,10 @@ define gui.skip_ypos = 15
 define gui.notify_ypos = 68
 
 ## 選單選項之間的間距
-define gui.choice_spacing = 33
+define gui.choice_spacing = 40
 
 ## 主選單和遊戲選單導航部分中的按鈕
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 15
 
 ## 控制首選項之間的間距
 define gui.pref_spacing = 15
@@ -320,13 +345,13 @@ define gui.unscrollable = "hide"
 define config.history_length = 250
 
 ## 歷史畫面條目的高度，或設爲 None 以犧牲性能為代價使高度可變
-define gui.history_height = 210
+define gui.history_height = 150
 
 ## 在歷史畫面條目之間添加的額外空間。
 define gui.history_spacing = 0
 
 ## 給予對話角色名稱的標籤的位置、寬度和對齊方式
-define gui.history_name_xpos = 233
+define gui.history_name_xpos = 130
 define gui.history_name_ypos = 0
 define gui.history_name_width = 233
 define gui.history_name_xalign = 1.0
@@ -334,7 +359,7 @@ define gui.history_name_xalign = 1.0
 ## 對話文字的位置、寬度和對齊方式
 define gui.history_text_xpos = 255
 define gui.history_text_ypos = 3
-define gui.history_text_width = 1110
+define gui.history_text_width = 900
 define gui.history_text_xalign = 0.0
 
 
@@ -421,8 +446,8 @@ init python:
         ## 改變各種東西的大小和間距。
         gui.slider_size = 54
 
-        gui.choice_button_width = 1860
-        gui.choice_button_text_size = 45
+        gui.choice_button_width = 20
+        gui.choice_button_text_size = 50
 
         gui.navigation_spacing = 30
         gui.pref_button_spacing = 15

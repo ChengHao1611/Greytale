@@ -24,11 +24,11 @@ image Chara despair = "images/characters/Chara/Chara_despair.png"
 image Chara look_up = "images/characters/Chara/Chara_look_up.png"
 image Chara surprised = "images/characters/Chara/Chara_surprised.png"
 
-$ convert_music = False;
 
 
 # 遊戲從這裡開始。
 label start:
+    #這裡的停止音樂是在options.rpy Line:58
     stop music
 
     scene black
@@ -36,7 +36,6 @@ label start:
     play music "Undertale - Intro Sound.mp3" volume 1.0
 
     scene white with Dissolve(5.0)
-    $ convert_music = True;
     stop music
     $ quick_menu = False  #待修改
 

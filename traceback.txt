@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/options.rpy", line 18, in script
+    define gui.show_name = false
+  File "game/options.rpy", line 18, in <module>
+    define gui.show_name = false
+NameError: name 'false' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/options.rpy", line 18, in script
+    define gui.show_name = false
+  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 2235, in execute
+    self.set()
+  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 2249, in set
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "D:\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/options.rpy", line 18, in <module>
+    define gui.show_name = false
+NameError: name 'false' is not defined
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.3.2.24090902
+Greytale 1.0
+Mon Nov 11 23:18:35 2024

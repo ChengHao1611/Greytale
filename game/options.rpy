@@ -15,7 +15,7 @@ define config.name = _("Greytale")
 
 ## 決定上面給出的標題是否顯示在主選單畫面上。將其設為 False 以隱藏標題。
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## 遊戲的版本
@@ -32,7 +32,7 @@ define gui.about = _p("""
 ## 遊戲的短名稱，用於建立發行版中的可執行檔和目錄。它必須只是 ASCII，並且不能包
 ## 含空格、冒號或分號。
 
-define build.name = "Greytale"
+define build.name = "RE:Greytale"
 
 
 ## 聲音和音樂 #######################################################################
@@ -55,7 +55,7 @@ define config.has_voice = True
 ## 取消註解以下行以設定玩家在主選單時播放的音訊檔案。該檔案將繼續在遊戲中播放，
 ## 直到停止或播放另一個檔案。
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/Once Upon a Time Remix Cover (Undertale).mp3"
 
 
 ## 過渡 ##########################################################################
@@ -101,8 +101,8 @@ define config.window = "auto"
 
 ## 用於顯示和隱藏對話視窗的轉換
 
-define config.window_show_transition = Dissolve(.2)
-define config.window_hide_transition = Dissolve(.2)
+define config.window_show_transition = False
+define config.window_hide_transition = False
 
 
 ## 首選項預設值 ######################################################################

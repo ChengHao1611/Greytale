@@ -1,28 +1,56 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/options.rpy", line 18, in script
-    define gui.show_name = false
-  File "game/options.rpy", line 18, in <module>
-    define gui.show_name = false
-NameError: name 'false' is not defined
+After initialization, but before game start.
+  File "game/screens.rpy", line 1007, in prepare_screen
+    screen help():
+  File "game/screens.rpy", line 1007, in prepare
+    screen help():
+  File "game/screens.rpy", line 1013, in prepare
+    use game_menu(_("説明"), scroll="viewport"):
+  File "game/screens.rpy", line 1013, in prepare
+    use game_menu(_("説明"), scroll="viewport"):
+  File "game/screens.rpy", line 1017, in prepare
+    vbox:
+  File "game/screens.rpy", line 1017, in prepare
+    vbox:
+  File "game/screens.rpy", line 1028, in prepare
+    if device == "keyboard":
+  File "game/screens.rpy", line 1032, in prepare
+    elif device == "gamepad":
+Exception: A screen named gamepad_help does not exist.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/options.rpy", line 18, in script
-    define gui.show_name = false
-  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 2235, in execute
-    self.set()
-  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 2249, in set
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "D:\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/options.rpy", line 18, in <module>
-    define gui.show_name = false
-NameError: name 'false' is not defined
+  File "D:\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\renpy-8.3.2-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "D:\renpy-8.3.2-sdk\renpy\display\screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 1007, in prepare_screen
+    screen help():
+  File "game/screens.rpy", line 1007, in prepare
+    screen help():
+  File "game/screens.rpy", line 1013, in prepare
+    use game_menu(_("説明"), scroll="viewport"):
+  File "game/screens.rpy", line 1013, in prepare
+    use game_menu(_("説明"), scroll="viewport"):
+  File "game/screens.rpy", line 1017, in prepare
+    vbox:
+  File "game/screens.rpy", line 1017, in prepare
+    vbox:
+  File "game/screens.rpy", line 1028, in prepare
+    if device == "keyboard":
+  File "game/screens.rpy", line 1032, in prepare
+    elif device == "gamepad":
+  File "D:\renpy-8.3.2-sdk\renpy\sl2\slast.py", line 2030, in prepare
+    raise Exception("A screen named {} does not exist.".format(self.target))
+Exception: A screen named gamepad_help does not exist.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 Greytale 1.0
-Mon Nov 11 23:18:35 2024
+Tue Nov 12 23:15:58 2024

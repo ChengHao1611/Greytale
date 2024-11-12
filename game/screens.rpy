@@ -241,19 +241,49 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("返回") action Rollback()
-            textbutton _("歷史") action ShowMenu('history')
-            textbutton _("略過") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自動") action Preference("auto-forward", "toggle")
-            textbutton _("儲存") action ShowMenu('save')
-            textbutton _("Q.儲存") action QuickSave()
-            textbutton _("Q.讀取") action QuickLoad()
-            textbutton _("設定") action ShowMenu('preferences')
+            textbutton _("返回"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action Rollback()
+            textbutton _("歷史"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action ShowMenu('history')
+            textbutton _("略過"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("自動"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action Preference("auto-forward", "toggle")
+            textbutton _("儲存"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action ShowMenu('save')
+            textbutton _("Q.儲存"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action QuickSave()
+            textbutton _("Q.讀取"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action QuickLoad()
+            textbutton _("設定"):
+                hover_sound "sound/select.wav"
+                activate_sound "sound/confirm.wav"
+                action ShowMenu('preferences')
 
 
 ## 此代碼確保只要玩家沒有明確隱藏介面， quick_menu 畫面就會在遊戲中顯示。
 init python:
     config.overlay_screens.append("quick_menu")
+
+init -1 python:
+    #禁用自動存檔
+    config.has_autosave = False
+    #禁用快速存檔
+    config.has_quicksave = False
 
 default quick_menu = True
 
@@ -265,6 +295,8 @@ style quick_button:
 
 style quick_button_text:
     properties gui.text_properties("quick_button")
+    size 35
+    spacing 15 
 
 
 ################################################################################
@@ -280,8 +312,8 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        xpos 0.88
+        yalign 0.6
 
         spacing gui.navigation_spacing
 
@@ -329,6 +361,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    xalign 0.9
 
 
 ## 主選單畫面 #######################################################################
@@ -344,6 +377,14 @@ screen main_menu():
 
     add gui.main_menu_background
 
+    add gui.font_title:
+        zoom 0.5
+        xalign 0.5
+        yalign 0.08
+    add gui.demo_stamp:
+        zoom 0.5
+        xalign 0.5
+        yalign 0.0
     ## 這個空框使主選單變暗。
     frame:
         style "main_menu_frame"
@@ -372,6 +413,7 @@ style main_menu_version is main_menu_text
 style main_menu_frame:
     xsize 420
     yfill True
+    xalign 1.0
 
     background "gui/overlay/main_menu.png"
 
@@ -433,8 +475,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                         side_yfill True
 
                         vbox:
-                            spacing spacing
-
+                            #spacing spacing
                             transclude
 
                 elif scroll == "vpgrid":
@@ -450,7 +491,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                         side_yfill True
 
-                        spacing spacing
+                        #spacing spacing
 
                         transclude
 
@@ -485,22 +526,22 @@ style return_button is navigation_button
 style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
-    bottom_padding 45
+    bottom_padding 100
     top_padding 180
 
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
-    xsize 420
+    xsize 50
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
-    right_margin 30
-    top_margin 15
+    left_margin 100
+    right_margin 500
+    top_margin 50
 
 style game_menu_viewport:
-    xsize 1380
+    xsize 1230
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -509,7 +550,8 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
+    xalign 0.89
+    yalign 0.05
     ysize 180
 
 style game_menu_label_text:
@@ -518,8 +560,9 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos gui.navigation_xpos
-    yalign 1.0
+    #xpos gui.navigation_xpos
+    xalign 0.88
+    yalign 0.95
     yoffset -45
 
 
@@ -658,7 +701,7 @@ screen file_slots(title):
                         textbutton "[page]" action FilePage(page)
 
                     textbutton _(">") action FilePageNext()
-                    key "save_page_next" action FilePageNext()
+                    #key "save_page_next" action FilePageNext()
 
                 if config.has_sync:
                     if CurrentScreenName() == "save":
@@ -737,6 +780,13 @@ screen preferences():
 
                 ## 可以在此處新增 "radio_pref" 或 "check_pref" 類型的其他 vbox，
                 ## 以新增其他建立者定義的首選項。
+                vbox:
+                    style_prefix "radio"
+                    label _("Language")
+
+                    textbutton "繁體中文" text_font "fonts/Cubic_11_1.010_R.ttf" action Language(None)
+                    textbutton "English" text_font "fonts/Cubic_11_1.010_R.ttf" action Language("English")
+
 
             null height (4 * gui.pref_spacing)
 
@@ -984,54 +1034,40 @@ screen help():
 
 
 screen keyboard_help():
+    hbox:
+        label _("Enter")
+        text _("推進對話和確認")
 
     hbox:
-        label _("回車")
-        text _("推進對話並啟動介面。")
-
-    hbox:
-        label _("空格")
-        text _("無需選擇即可推進對話。")
+        label _("Space")
+        text _("推進對話")
 
     hbox:
         label _("方向鍵")
-        text _("導航介面。")
+        text _("閱覽介面")
 
     hbox:
-        label _("退出鍵")
-        text _("訪問遊戲選單。")
+        label _("Esc")
+        text _("回到遊戲介面")
+    hbox:
+        label _("Tab")
+        text _("切換略過按鈕的開關")
 
     hbox:
-        label _("控制鍵")
-        text _("按住時跳過對話。")
-
-    hbox:
-        label _("製表鍵")
-        text _("保持對話跳過。")
-
-    hbox:
-        label _("上翻頁鍵")
-        text _("回滾到之前的對話。")
-
-    hbox:
-        label _("下翻頁鍵")
-        text _("前進到稍後的對話。")
-
-    hbox:
-        label "H"
-        text _("隱藏使用者介面。")
+        label _("滑鼠滾輪上下")
+        text _("查看之前之後的對話")
 
     hbox:
         label "S"
-        text _("截取螢幕截圖。")
+        text _("畫面截圖")
 
     hbox:
-        label "V"
-        text _("切換輔助 {a=https://www.renpy.org/l/voicing} Self-Vocing {/a}.")
+        label " "
 
     hbox:
-        label "Shift+A"
-        text _("打開輔助功能選單")
+        label " "
+        text _("當血量 (HP) 降到 0 時，你就輸了。")   
+
 
 
 screen mouse_help():
@@ -1583,3 +1619,7 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+style button:
+    activate_sound "sound/confirm.wav" 
+    hover_sound "sound/select.wav"

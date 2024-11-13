@@ -42,7 +42,6 @@ label start:
     scene BG_Ruins_no_flowey:
         zoom 1.3 xpos -250 ypos -200
     with Dissolve(2.0)
-    $ convert_music = False;
     pause 1.0
 
     show white:
@@ -57,7 +56,7 @@ label start:
     Narration "* 她坐起身，輕輕拍掉身上的泥土。"
     Chara "*  （還好沒受傷。）"
 
-    show Chara look up: 
+    show Chara look_up: 
         zoom 0.25  xalign 0.5 ypos 80
     Narration "* 她抬起頭，環顧四周。"
     hide Chara

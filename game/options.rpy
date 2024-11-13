@@ -13,6 +13,10 @@
 define config.name = _("Greytale")
 
 
+##此為開發者模式，在發布遊戲時"務必!!!"改成False
+define config.developer = True
+
+
 ## 決定上面給出的標題是否顯示在主選單畫面上。將其設為 False 以隱藏標題。
 
 define gui.show_name = False

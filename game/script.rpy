@@ -2,9 +2,14 @@
 init python:
     
     def general(event, interact=True, **kwargs):
-        #播放音樂
+        #播放音效
+        ##"show_done"顯示每個對話片段後調用。
         if event == "show_done":
-            renpy.sound.play("sound/general.wav", loop="True", channel="sound")
+            for i in range(1):
+                renpy.sound.play("sound/general.wav", loop="True", channel="sound")
+                #renpy.pause(0.2)  # 等待 0.2 秒
+            #renpy.sound.play("sound/general.wav", loop="True", channel="sound")
+        #"slow_done" 在緩慢的文字顯示完畢後調用
         elif event == "slow_done" or event == "end":
             renpy.sound.stop(channel="sound")
 
@@ -15,8 +20,8 @@ define Chara = Character('Chara', color="#D3D3D3") #Chara角色
 # image命令可用於定義一個圖像。
 #前綴BG代表BackGround
 # eg. image eileen happy = "eileen_happy.png"
-image BG_Ruins = "images/background/ruins.png"
-image BG_Ruins_no_flowey = "images/background/ruins_no_flowey.png"
+image BG_Ruins = "images/background/Chaper_1/Chaper_1-1/ruins.png"
+image BG_Ruins_no_flowey = "images/background/Chaper_1/Chaper_1-1/ruins_no_flowey.png"
 image BG_white = "images/background/white.png"
 
 

@@ -14,6 +14,7 @@ define config.name = _("Greytale")
 
 
 ##此為開發者模式，在發布遊戲時"務必!!!"改成False
+##能在遊戲運行中透過 shift + D 啟動「開發者選單」，或用 Shift + R 快速地重新載入整個遊戲。
 define config.developer = True
 
 
@@ -82,7 +83,6 @@ define config.intra_transition = dissolve
 
 define config.after_load_transition = None
 
-
 ## 在遊戲結束後進入主選單時使用。
 
 define config.end_game_transition = None
@@ -113,7 +113,7 @@ define config.window_hide_transition = False
 
 ## 控制預設文字速度。預設值 0 是無限的，而任何其他數字是每秒鍵入的字元數。
 
-default preferences.text_cps = 0
+default preferences.text_cps = 10
 
 
 ## 預設自動轉送延遲。數字越大，等待時間越長，有效範圍為 0 到 30。

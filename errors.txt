@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 15: unexpected EOF while parsing
-    True;
-         ^
+File "game/script.rpy", line 10: invalid syntax
+                renpy.pause 0.2  
+                             ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 13 21:16:21 2024
+Wed Nov 13 22:35:43 2024

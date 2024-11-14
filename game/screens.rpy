@@ -329,12 +329,12 @@ screen navigation():
 
             textbutton _("標題畫面") action MainMenu()
 
-        textbutton _("關於") action ShowMenu("about")
+        #textbutton _("關於") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## 幫助對於行動裝置來說是不必要或不相關的。
-            textbutton _("説明") action ShowMenu("help")
+            #textbutton _("説明") action ShowMenu("help")
 
         if renpy.variant("pc"):
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 10: invalid syntax
-                renpy.pause 0.2  
-                             ^
+File "game/script.rpy", line 40: end of line expected.
+    Narration "* 睜開眼睛後第一個看到的，{w=0.2}\n* 是黑白色的花。" "* 測試"
+                                                 ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 13 22:35:43 2024
+Wed Nov 13 23:56:45 2024

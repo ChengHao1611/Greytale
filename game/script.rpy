@@ -37,7 +37,7 @@ label start:
     stop music
 
     scene black
-    Narration "* 睜開眼睛後第一個看到的，是黑白色的花。"
+    Narration "* 睜開眼睛後第一個看到的，{w=0.2}\n* 是黑白色的花。"
     play music "Undertale - Intro Sound.mp3" volume 1.0
 
     scene white with Dissolve(5.0)

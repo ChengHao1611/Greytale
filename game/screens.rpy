@@ -235,20 +235,16 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
+        vbox:
             style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.94
+            yalign 0.93
 
             textbutton _("返回"):
                 hover_sound "sound/select.wav"
                 activate_sound "sound/confirm.wav"
                 action Rollback()
-            textbutton _("歷史"):
-                hover_sound "sound/select.wav"
-                activate_sound "sound/confirm.wav"
-                action ShowMenu('history')
             textbutton _("略過"):
                 hover_sound "sound/select.wav"
                 activate_sound "sound/confirm.wav"
@@ -261,14 +257,6 @@ screen quick_menu():
                 hover_sound "sound/select.wav"
                 activate_sound "sound/confirm.wav"
                 action ShowMenu('save')
-            textbutton _("Q.儲存"):
-                hover_sound "sound/select.wav"
-                activate_sound "sound/confirm.wav"
-                action QuickSave()
-            textbutton _("Q.讀取"):
-                hover_sound "sound/select.wav"
-                activate_sound "sound/confirm.wav"
-                action QuickLoad()
             textbutton _("設定"):
                 hover_sound "sound/select.wav"
                 activate_sound "sound/confirm.wav"

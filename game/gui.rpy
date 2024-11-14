@@ -56,6 +56,10 @@ define gui.interface_text_color = u'#ffffff'
 ## 用於遊戲內文字的字形
 define gui.text_font = "fonts/Cubic_11_1.010_R.ttf"
 
+##調整對話間距
+#define gui.text_line_spacing = 10  # 數值越大，行間距越寬
+
+
 ## 用於角色名稱的字形
 define gui.name_text_font = "fonts/Cubic_11_1.010_R.ttf"
 

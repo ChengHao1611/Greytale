@@ -228,6 +228,8 @@ style choice_button_text is default:
 ##
 ## 快捷選單顯示在遊戲中，以便輕鬆訪問遊戲外選單。
 
+
+##對話框時會出現的設定
 screen quick_menu():
 
     ## 確保它出現在其他螢幕的頂部。

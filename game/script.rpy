@@ -37,12 +37,14 @@ label start:
     stop music
 
     scene black
-    Narration "* 睜開眼睛後第一個看到的，{w=0.2}\n* 是黑白色的花。"
+    Narration "* 睜開眼睛後第一個看到的，{p=0.2}* 是黑白色的花。"
+    #使quick_menu不受到"BG_Ruins_no_flowey"的Dissolve影響
+    hide screen quick_menu
+    $ quick_menu = False
     play music "Undertale - Intro Sound.mp3" volume 1.0
 
     scene white with Dissolve(5.0)
     stop music
-    $ quick_menu = False  #待修改
 
     scene BG_Ruins_no_flowey:
         zoom 1.3 xpos -250 ypos -200
@@ -56,7 +58,7 @@ label start:
     show Chara despair: 
         zoom 0.25  xalign 0.5 ypos 80
     with moveinbottom
-    $ quick_menu = True   #待修改
+    $ quick_menu = True 
     Chara "* 「......」"
     Narration "* 她坐起身，輕輕拍掉身上的泥土。"
     Chara "*  （還好沒受傷。）"

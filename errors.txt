@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 37: expected statement.
-    textbutton ("進入主選單") action return
-                                ^
+File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-1.rpy", line 65: expected statement.
+    quick_menu = True
+               ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Nov 17 00:45:06 2024
+Sun Nov 17 23:43:24 2024

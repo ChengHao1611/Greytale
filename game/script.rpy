@@ -20,9 +20,8 @@ define Chara = Character('Chara', color="#D3D3D3") #Chara角色
 # image命令可用於定義一個圖像。
 #前綴BG代表BackGround
 # eg. image eileen happy = "eileen_happy.png"
-image BG_Ruins = "images/background/Chaper_1/Chaper_1-1/ruins.png"
-image BG_Ruins_no_flowey = "images/background/Chaper_1/Chaper_1-1/ruins_no_flowey.png"
-image BG_white = "images/background/white.png"
+image bg_Ruins_no_flowey = "images/background/chapter_1/chapter_1-1/ruins_no_flowey.png"
+#image bg_white = "images/background/white.png"
 
 
 image Chara despair = "images/characters/Chara/Chara_despair.png"
@@ -59,7 +58,7 @@ label start:
     scene white with Dissolve(5.0)
     stop music
 
-    scene BG_Ruins_no_flowey:
+    scene bg_Ruins_no_flowey:
         zoom 1.3 xpos -250 ypos -200
     with Dissolve(2.0)
     pause 1.0
@@ -80,6 +79,6 @@ label start:
         zoom 0.25  xalign 0.5 ypos 80
     Narration "* 她抬起頭，環顧四周。"
     hide Chara
-    #call Fallenplace 跳入下一個環境
+    call chapter_1_1_1_1 #跳到chapter_1_1_1_
 
     return

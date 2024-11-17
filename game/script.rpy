@@ -29,12 +29,25 @@ image Chara despair = "images/characters/Chara/Chara_despair.png"
 image Chara look_up = "images/characters/Chara/Chara_look_up.png"
 image Chara surprised = "images/characters/Chara/Chara_surprised.png"
 
+#default enterGame = 0  #猜測回到標題畫面default會再跑一次
+
+# label main_menu:
+#     #screen main_menu
+#     "enterGame = [enterGame]"
+#     if enterGame == 0:
+#         "恭喜你成功了"
+#         "嘿嘿"
+#     $ enterGame += 1
+#     "enterGame = [enterGame]"
+#     call screen main_menu()
+#     return
 
 
 # 遊戲從這裡開始。
 label start:
     #這裡的停止音樂是在options.rpy Line:58
     stop music
+    hide screen main_menu
 
     scene black
     Narration "* 睜開眼睛後第一個看到的，{p=0.2}* 是黑白色的花。"
@@ -69,4 +82,4 @@ label start:
     hide Chara
     #call Fallenplace 跳入下一個環境
 
-return
+    return

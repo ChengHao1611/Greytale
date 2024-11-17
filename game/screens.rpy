@@ -327,7 +327,7 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("標題畫面") action MainMenu()
+            textbutton _("標題畫面") action MainMenu(True,False)
 
         #textbutton _("關於") action ShowMenu("about")
 

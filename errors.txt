@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 41: invalid syntax
-    quick_menu = False with None
-                        ^
+File "game/script.rpy", line 37: expected statement.
+    textbutton ("進入主選單") action return
+                                ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Thu Nov 14 22:54:38 2024
+Sun Nov 17 00:45:06 2024

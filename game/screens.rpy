@@ -310,6 +310,7 @@ screen navigation():
         if main_menu:
 
             textbutton _("開始") action Start()
+            textbutton _("跳圖") action Jump("chapter_1_1_1_1")
 
         else:
 

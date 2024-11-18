@@ -1,42 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00start.rpy", line 216, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 548, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 548, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 559, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+After initialization, but before game start.
+  File "game/screens.rpy", line 300, in prepare_screen
+    screen navigation():
+  File "game/screens.rpy", line 300, in prepare
+    screen navigation():
+  File "game/screens.rpy", line 302, in prepare
+    vbox:
+  File "game/screens.rpy", line 302, in prepare
+    vbox:
+  File "game/screens.rpy", line 310, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 310, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 313, in prepare
+    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+  File "game/screens.rpy", line 313, in prepare
+    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+SyntaxError: invalid syntax (game/screens.rpy, line 313)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 216, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 548, in script
-    python hide:
-  File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 548, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 559, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-  File "D:\renpy-8.3.2-sdk\renpy\loadsave.py", line 826, in load
-    log.unfreeze(roots, label="_after_load")
-  File "D:\renpy-8.3.2-sdk\renpy\rollback.py", line 1135, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "D:\renpy-8.3.2-sdk\renpy\rollback.py", line 930, in rollback
-    self.load_failed()
-  File "D:\renpy-8.3.2-sdk\renpy\rollback.py", line 848, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "D:\renpy-8.3.2-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\renpy-8.3.2-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\renpy-8.3.2-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "D:\renpy-8.3.2-sdk\renpy\display\screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 300, in prepare_screen
+    screen navigation():
+  File "game/screens.rpy", line 300, in prepare
+    screen navigation():
+  File "game/screens.rpy", line 302, in prepare
+    vbox:
+  File "game/screens.rpy", line 302, in prepare
+    vbox:
+  File "game/screens.rpy", line 310, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 310, in prepare
+    if main_menu:
+  File "game/screens.rpy", line 313, in prepare
+    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+  File "game/screens.rpy", line 313, in prepare
+    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+  File "D:\renpy-8.3.2-sdk\renpy\py3analysis.py", line 803, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "D:\renpy-8.3.2-sdk\renpy\py3analysis.py", line 785, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "D:\renpy-8.3.2-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "D:\renpy-8.3.2-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "D:\renpy-8.3.2-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/screens.rpy, line 313)
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 Greytale 1.0
-Sun Nov 17 23:51:30 2024
+Mon Nov 18 22:32:02 2024

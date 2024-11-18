@@ -27,3 +27,12 @@ screen Fallenplacebg():
         activate_sound "sound/confirm.wav"
         hover_sound "sound/select.wav"
         action Jump("Tombstone_pressed")  
+    
+    imagebutton:
+        xpos 0.1285
+        ypos 0.281
+        idle "images/background/Chapter_1/Chapter_1-1/UI/flowerpile_idle.png"
+        hover "images/background/Chapter_1/Chapter_1-1/UI/flowerpile_hovered.png"
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("Flowerpile_pressed") 

@@ -14,9 +14,9 @@ After initialization, but before game start.
   File "game/screens.rpy", line 310, in prepare
     if main_menu:
   File "game/screens.rpy", line 313, in prepare
-    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+    textbutton _("跳圖") action [Hide("main_menu"),call chapter_1_1_1_1]
   File "game/screens.rpy", line 313, in prepare
-    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+    textbutton _("跳圖") action [Hide("main_menu"),call chapter_1_1_1_1]
 SyntaxError: invalid syntax (game/screens.rpy, line 313)
 
 -- Full Traceback ------------------------------------------------------------
@@ -43,9 +43,9 @@ Full traceback:
   File "game/screens.rpy", line 310, in prepare
     if main_menu:
   File "game/screens.rpy", line 313, in prepare
-    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+    textbutton _("跳圖") action [Hide("main_menu"),call chapter_1_1_1_1]
   File "game/screens.rpy", line 313, in prepare
-    textbutton _("跳圖") action [hide screen main_menu,Jump("chapter_1_1_1_1")]
+    textbutton _("跳圖") action [Hide("main_menu"),call chapter_1_1_1_1]
   File "D:\renpy-8.3.2-sdk\renpy\py3analysis.py", line 803, in ast_eval
     return self.ast_eval_literal(expr)[0]
   File "D:\renpy-8.3.2-sdk\renpy\py3analysis.py", line 785, in ast_eval_literal
@@ -61,4 +61,4 @@ SyntaxError: invalid syntax (game/screens.rpy, line 313)
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 Greytale 1.0
-Mon Nov 18 22:32:02 2024
+Mon Nov 18 23:11:51 2024

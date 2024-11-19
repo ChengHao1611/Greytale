@@ -36,3 +36,59 @@ screen Fallenplacebg():
         activate_sound "sound/confirm.wav"
         hover_sound "sound/select.wav"
         action Jump("Flowerpile_pressed") 
+
+    imagebutton:
+        xpos 0.233
+        ypos 0.00
+        idle "images/background/Chapter_1/Chapter_1-1/UI/pillar_idle.png" 
+        hover "images/background/Chapter_1/Chapter_1-1/UI/pillar_hovered.png"
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("Pillar_pressed")  
+
+    imagebutton:
+        xpos 0.35
+        ypos 0.00
+        idle "images/background/Chapter_1/Chapter_1-1/UI/light_idle.png"
+        hover "images/background/Chapter_1/Chapter_1-1/UI/light_hovered.png"
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("Light_pressed")
+
+    #####I hate grass############ 
+
+    imagebutton:
+        xpos 0.318
+        ypos 0.805
+        idle "images/background/Chapter_1/Chapter_1-1/UI/grass1_idle.png"
+        hover "images/background/Chapter_1/Chapter_1-1/UI/grass1_hovered.png"
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("Grass1_pressed") 
+
+    imagebutton:
+        xpos 0.673
+        ypos 0.76
+        idle "images/background/Chapter_1/Chapter_1-1/UI/grass2_idle.png"
+        hover "images/background/Chapter_1/Chapter_1-1/UI/grass2_hovered.png"
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("Grass2_pressed") 
+
+    imagebutton:
+        xpos 0.727
+        ypos 0.407
+        idle "images/background/Chapter_1/Chapter_1-1/UI/grass3_idle.png"
+        hover "images/background/Chapter_1/Chapter_1-1/UI/grass3_hovered.png"
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("Grass3_pressed") 
+
+    imagebutton:
+        xpos 0.173
+        ypos 0.405
+        idle "images/background/Chapter_1/Chapter_1-1/UI/grass4_idle.png"
+        hover "images/background/Chapter_1/Chapter_1-1/UI/grass4_hovered.png"
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("Grass4_pressed") 

@@ -92,3 +92,13 @@ screen Fallenplacebg():
         activate_sound "sound/confirm.wav"
         hover_sound "sound/select.wav"
         action Jump("Grass4_pressed") 
+
+    if persistent.Flowey_click_count <8:
+        imagebutton:
+            xpos 0.6335
+            ypos 0.4285
+            idle "images/characters/Flowey/flowey_idle.png"
+            hover "images/characters/Flowey/flowey_hovered.png" 
+            activate_sound "sound/confirm.wav"
+            hover_sound "sound/select.wav"
+            action Jump("Flowey_pressed") 

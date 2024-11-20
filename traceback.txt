@@ -1,19 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 82, in script call
-    call chapter_1_1_1_1 #跳到chapter_1_1_1_
-  File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 140, in script
-    Flowey "* 「......」"
+  File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 151, in script
+    Flowey "* 「喂！你是故意的吧？！」"
 RecursionError: maximum recursion depth exceeded in __instancecheck__
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 82, in script call
-    call chapter_1_1_1_1 #跳到chapter_1_1_1_
-  File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 140, in script
-    Flowey "* 「......」"
+  File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 151, in script
+    Flowey "* 「喂！你是故意的吧？！」"
   File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 2573, in execute
     Say.execute(self)
   File "D:\renpy-8.3.2-sdk\renpy\ast.py", line 615, in execute
@@ -1159,4 +1155,4 @@ RecursionError: maximum recursion depth exceeded in __instancecheck__
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 Greytale 1.0
-Tue Nov 19 23:15:18 2024
+Wed Nov 20 22:20:48 2024

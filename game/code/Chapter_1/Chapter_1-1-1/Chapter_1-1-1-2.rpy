@@ -75,11 +75,11 @@ label Flowey_pressed:
         Chara "* 「......。」"
         hide Chara
 
-        show flowey sad:
+        show Flowey sad:
             zoom 0.25  xalign 0.5 ypos 150  
         Flowey "* 「......。」"
         Chara "* (至少 Charasriel 沒有死，已經是不幸中的大幸了。）"
-        hide flowey sad
+        hide Flowey sad
 
         show Chara sad_smile:
             zoom 0.25  xalign 0.5 ypos 80 
@@ -87,11 +87,11 @@ label Flowey_pressed:
         hide Chara
         Flowey "* 「我也很高興能再見到妳。」"
 
-        show flowey sad:
+        show Flowey sad:
             zoom 0.25  xalign 0.5 ypos 150  
         Flowey "* 「......」"
         Narration "* 沉默片刻，小花臉色凝重地開口："
-        hide flowey sad
+        hide Flowey sad
 
         show Flowey worried: 
             zoom 0.25  xalign 0.5 ypos 150

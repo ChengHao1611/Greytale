@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-1.rpy", line 10: expected 'word' not found.
-    default persistent..Light_click_count = 0
-                       ^
+File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 132: expected statement.
+    window:
+          ^
+
+File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 138: expected statement.
+    window:
+          ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Nov 19 21:36:23 2024
+Wed Nov 20 22:51:53 2024

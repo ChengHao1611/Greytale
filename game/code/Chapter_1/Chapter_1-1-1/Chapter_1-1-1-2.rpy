@@ -126,12 +126,6 @@ label Flowey_pressed:
         Flowey "* 「妳覺得呢？」"
         Narration "* 他一臉期盼地等待著答覆。"
 
-        menu:
-            "* 要帶上小花嗎？"
-            "Yes":
-                jump Yes_1
-            "No":
-                jump No_1
     elif persistent.Flowey_click_count == 2:
         $ renpy.block_rollback()
         Flowey "* 「哦！Chara你回來了？」"
@@ -161,6 +155,15 @@ label Flowey_pressed:
         Flowey "* 「滾！！！」"
         hide Flowey
         Narration "* 小花以極快的速度鑽回土裡了。"
+        jump chapter_1_1_1_1
+
+    menu:
+        "* 要帶上小花嗎？"
+        "Yes":
+            jump Yes_1
+
+        "No":
+            jump No_1
     
     jump chapter_1_1_1_1
 

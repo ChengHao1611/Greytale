@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 132: expected statement.
-    window:
-          ^
-
-File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 138: expected statement.
-    window:
-          ^
+File "game/options.rpy", line 54: invalid syntax
+        "sound": 0.5\
+         ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Nov 20 22:51:53 2024
+Fri Nov 22 22:29:05 2024

@@ -93,7 +93,7 @@ screen Fallenplacebg():
         hover_sound "sound/select.wav"
         action Jump("Grass4_pressed") 
 
-    if persistent.Flowey_click_count <8:
+    if not persistent.Flowey_unappear:
         imagebutton:
             xpos 0.6335
             ypos 0.4285

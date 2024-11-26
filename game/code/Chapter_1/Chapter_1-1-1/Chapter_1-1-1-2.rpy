@@ -1,6 +1,7 @@
 # 您可以在此編寫遊戲的腳本。
-default persistent.Flowey_click_count = 0
-
+default persistent.Flowey_click_count = -1
+default persistent.isLeaveChapter_1_1_1 = False
+default persistent.Flowey_unappear = False
 
 label Flowey_pressed:
     $ renpy.block_rollback()
@@ -146,6 +147,7 @@ label Flowey_pressed:
 
     else: 
         $ renpy.block_rollback()
+        $ persistent.Flowey_unappear = True
         Flowey "* 「煩死了！」"
         Flowey "* 「滾！！！」"
         hide Flowey

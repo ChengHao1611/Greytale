@@ -1,8 +1,5 @@
 ##chapter_1-1-1-1開始
 
-image Chara sad = "images/characters/Chara/Chara_sad.png"
-image bg_Ruins = "images/background/chapter_1/chapter_1-1/ruins.png"
-
 default persistent.Circle_click_count = 0
 default persistent.Tombstone_click_count = 0
 default persistent.Flowerpile_click_count = 0

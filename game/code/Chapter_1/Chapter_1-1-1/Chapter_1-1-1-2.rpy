@@ -1,18 +1,6 @@
 # 您可以在此編寫遊戲的腳本。
 default persistent.Flowey_click_count = 0
 
-# define命令可定義遊戲中出現的角色名稱與對應文本顏色。
-define Flowey = Character("[Flowey]", color="#e4e4e4")
-
-# image命令可用於定義一個圖像。
-# eg. image eileen happy = "eileen_happy.png"
-image Chara sad_smile = "images/characters/Chara/chara_sad_smile.png"
-image Flowey worried = "images/characters/Flowey/flowey_worried.png"
-image Flowey look_away = "images/characters/Flowey/flowey_look_away.png"
-image Flowey happy_goat = "images/characters/Flowey/flowey_happy_goat.png"
-image Flowey sad = "images/characters/Flowey/flowey_sad.png"
-
-
 
 label Flowey_pressed:
     $ renpy.block_rollback()

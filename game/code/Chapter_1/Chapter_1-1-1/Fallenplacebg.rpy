@@ -102,3 +102,19 @@ screen Fallenplacebg():
             activate_sound "sound/confirm.wav"
             hover_sound "sound/select.wav"
             action Jump("Flowey_pressed") 
+
+    imagebutton:
+        idle "images/background/Chapter_1/Chapter_1-1/UI/eye_idle.png"
+        hover "eye_hover"
+        xpos 0.05
+        ypos 0.74
+        activate_sound "sound/confirm.wav"
+        hover_sound "sound/select.wav"
+        action Jump("eye_pressed")
+
+image eye_hover:
+    "images/background/Chapter_1/Chapter_1-1/UI/eye_hovered_left.png"
+    pause 0.5
+    "images/background/Chapter_1/Chapter_1-1/UI/eye_hovered_right.png"
+    pause 0.5
+    repeat

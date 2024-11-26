@@ -223,3 +223,18 @@ label Grass4_pressed:
         Chara "* （看起來很有精神）"
 
     jump chapter_1_1_1_1
+
+label eye_pressed:
+    $ renpy.block_rollback()
+
+    scene bg_Ruins
+    show white:
+            alpha 0.2 
+    pause 0.2
+
+    $ quick_menu = True 
+    Narration "* 還沒做好哈哈哈哈"
+    Narration "* 哈哈哈哈哈哈哈哈"
+    Narration "* 哇哇哇哈哈哈哈哈"
+
+    jump chapter_1_1_1_1

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 54: invalid syntax
-        "sound": 0.5\
-         ^
+File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 28: end of line expected.
+    show screen choice_menu at Position(xpos=0.5, ypos=700)
+                            ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Nov 22 22:29:05 2024
+Sun Nov 24 00:59:09 2024

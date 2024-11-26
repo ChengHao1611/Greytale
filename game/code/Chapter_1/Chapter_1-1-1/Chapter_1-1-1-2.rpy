@@ -2,7 +2,7 @@
 default persistent.Flowey_click_count = 0
 
 # define命令可定義遊戲中出現的角色名稱與對應文本顏色。
-define Flowey = Character('[Flowey]', color="#e4e4e4")
+define Flowey = Character("[Flowey]", color="#e4e4e4")
 
 # image命令可用於定義一個圖像。
 # eg. image eileen happy = "eileen_happy.png"
@@ -54,7 +54,7 @@ label Flowey_pressed:
         $ Flowey = "Flowey"
         show Flowey happy_goat: 
             zoom 0.25  xalign 0.5 ypos 150
-        Flowey "* 「當然！是我Charasriel啊！」"
+        Flowey "* 「當然！是我Asriel啊！」"
         Flowey "* 「不過我現在變成一朵小花就是了，說來話長。」"
         hide Flowey
         Chara "* 「！」"
@@ -78,7 +78,7 @@ label Flowey_pressed:
         show Flowey sad:
             zoom 0.25  xalign 0.5 ypos 150  
         Flowey "* 「......。」"
-        Chara "* (至少 Charasriel 沒有死，已經是不幸中的大幸了。）"
+        Chara "* (至少 Asriel 沒有死，已經是不幸中的大幸了。）"
         hide Flowey sad
 
         show Chara sad_smile:
@@ -97,7 +97,7 @@ label Flowey_pressed:
             zoom 0.25  xalign 0.5 ypos 150
         Flowey "* 「抱歉，我很不想說這些，但地下出事了。」"
         Flowey "* 「到處都是奇怪的黑色東西，看到我就撲過來攻擊，路上還有好多塵埃......」"
-        Flowey "* 「我跑遍了整個地下，都沒看到任何怪物，或許剩下的躲起來了。」"
+        Flowey "* 「我跑遍了整個地下，都沒看到任何怪物，或許剩下的怪物躲起來了。」"
         Flowey "* 「後來我在實驗室看到 Misty 之前研究的東西，就是那個重置鍵，妳還記得吧？」"
         hide Flowey
         Chara "*  點頭。"
@@ -129,9 +129,9 @@ label Flowey_pressed:
         menu:
             "* 要帶上小花嗎？"
             "Yes":
-                jump Yes_1
+                jump chapter_1_1_1_3 #跳到回答Yes的label
             "No":
-                jump No_1
+                jump chapter_1_1_1_4 #跳到回答No的label
 
     elif persistent.Flowey_click_count == 2:
         $ renpy.block_rollback()
@@ -139,11 +139,11 @@ label Flowey_pressed:
         Flowey "* 「呃......你看起來有點糟糕。」"
         Flowey "* 「需要幫忙嗎？」"  
 
-    elif persistent.Flowey_click_count <= 4:
+    elif persistent.Flowey_click_count == 3 or persistent.Flowey_click_count == 4 :
         $ renpy.block_rollback()
         "* 「嗯？」"
 
-    elif persistent.Flowey_click_count <=6:
+    elif persistent.Flowey_click_count == 5 or persistent.Flowey_click_count == 6:
         $ renpy.block_rollback()
         Flowey "* 「......」"
 
@@ -164,84 +164,4 @@ label Flowey_pressed:
         Narration "* 小花以極快的速度鑽回土裡了。"
         jump chapter_1_1_1_1
     
-    jump chapter_1_1_1_1
-
-    return
-
-
-
-label Yes_1:
-    $ renpy.block_rollback()
-    Chara "......。"
-    Flowey "* 「啊啊太好了！！妳就把我放到你頭上吧！」"
-    Chara "* ......？"
-    Narration "* Chara 遲疑地看著小花，比了幾個手勢。"
-    Flowey "* 「妳把手伸過來。」"
-    Narration "* Chara 向小花伸出她唯一的那隻手。"
-    Narration "* 小花伸出他的藤蔓，捲到 Chara 的手臂上，等待對方地將自己移到頭頂。"
-    Narration "* 藤蔓輕輕穿過 Chara 的髮絲，小花最終將自己固定在她的頭髮上。"
-    Flowey "* 「鏘鏘！就當我是妳的髮箍吧，妳會不會不舒服？」"
-    Chara "* 「......。」"
-    Chara "* 比了幾個手勢。"
-    Flowey "* 「有點癢是嗎？那這樣呢？」"
-    Narration "* 他挪了挪位置。"
-    Chara "* 「......。」"
-    Flowey "* 「那就好！如果我們找到鏡子的話，我可以再把位置喬好看一點。」"
-    Chara "* 「......////。」"
-    Flowey "* 「但我喜歡看妳漂漂亮亮的樣子嘛！哈哈哈哈......{w}對了！這個給妳。」"
-    Narration "* 小花用藤蔓推了推突然出現在 Chara 眼前、有些破碎的重置鍵。"
-    Flowey "* 「我覺得妳能用的比我好。」"
-    Chara "「......。」"
-    Narration "* 她觸碰橘色的按鍵，感覺到它歸屬於自己。"
-    Flowey "* 「如果你看得差不多了，那就上路吧？」"
-
-    jump chapter_1_1_1_1
-
-
-label No_1:
-    $ renpy.block_rollback()
-    Chara "......。"
-    Flowey "* 「啊？！為、為什麼......？」"
-    Narration "* 他垂下頭，似乎受到很大的打擊，好一段時間說不出話來。"
-    Flowey "* 「好吧，我......尊重妳的選擇。」"
-    show Chara sad: 
-        zoom 0.25  xalign 0.5 ypos 80
-    Chara "* 「......。」" 
-    Chara "* （對不起 Charasriel，但我真的不想再看到那種情況發生了。）"
-    hide Chara
-    Flowey "* 「那些黑色東西真的很危險，妳在地下探索時一定要小心，盡量避開它們，知道嗎？」"
-    show Chara sad: 
-        zoom 0.25  xalign 0.5 ypos 80 
-    Chara "* 「......。」"
-    Flowey "* 「Chara......。」"
-    Chara "* 她比了好一大串手勢。"
-    Flowey "* 「原來如此，可是，那不是妳的錯啊。」"
-    show Chara despair: 
-        zoom 0.25  xalign 0.5 ypos 80
-    Chara "* 「......。」" 
-    Chara "* （不，都是我的錯。要不是因為我，他們兩個根本不會......。）"
-    show Chara sad: 
-        zoom 0.25  xalign 0.5 ypos 80
-    Chara "* 她比了幾個手勢。"
-    hide Chara
-    Flowey "* 「這樣......啊，要是我能再更強一點......。」"
-    Flowey "* 「Chara，妳收下這個。」" 
-    Narration "* 小花堅定地看向她，忽然，有些破碎的重置鍵出現在她眼前。"
-    Flowey "* 「我相信妳比我需要這個東西。」"
-    show Chara surprised: 
-        zoom 0.25  xalign 0.5 ypos 80
-    Chara "* 「......！！」"
-    Chara "* 她倉促比劃一陣。"
-    hide Chara
-    Flowey "* 「噢別擔心，我會一直待在這裡等妳，它們不會過來這裡。」"
-    Flowey "* 「......。」"
-    Flowey "* {size=-20}「而且，如果妳之後後悔了，也隨時找得到我。」{/size}" 
-    Flowey "*「所以，快收下吧，沒關係的！」"
-    show Chara sad: 
-        zoom 0.25  xalign 0.5 ypos 80 
-    Chara "* 「......。」"
-    Narration "* Chara 遲疑地伸出手，觸碰浮在空中的重置鍵。"
-    Narration "* 在接觸到按鍵的瞬間，她感受到它歸屬於自己。"
-    Flowey "*「如果你看得差不多了，那就上路吧？」"
-
     jump chapter_1_1_1_1

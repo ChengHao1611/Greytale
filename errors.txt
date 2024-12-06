@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/code/Chapter_1/Chapter_1-1-1/Chapter_1-1-1-2.rpy", line 28: end of line expected.
-    show screen choice_menu at Position(xpos=0.5, ypos=700)
-                            ^
+File "game/code/Function.rpy", line 10: invalid syntax
+        renpy.show("white", at_list=[renpy.alpha = 0.2])
+                                                  ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Nov 24 00:59:09 2024
+Fri Dec  6 21:56:59 2024

@@ -1,5 +1,5 @@
 ##function
-init python:
+init -2 python:
     
     def general(event, interact=True, **kwargs):
         #播放音效
@@ -13,22 +13,24 @@ init python:
         elif event == "slow_done" or event == "end":
             renpy.sound.stop(channel="sound")
 
-##Role
-define Narration = Character("",callback = general)  #旁白
-define Chara = Character('Chara', color="#D3D3D3") #Chara角色
-define Flowey = Character("[Flowey]", color="#e4e4e4")
+init -1:
+    ##Role
+    define Narration = Character("",callback = general)  #旁白
+    define Chara = Character('Chara', color="#D3D3D3") #Chara角色
+    define Flowey = Character("[Flowey]", color="#e4e4e4")
 
-##Image
-image Chara despair = "images/characters/Chara/Chara_despair.png"
-image Chara look_up = "images/characters/Chara/Chara_look_up.png"
-image Chara surprised = "images/characters/Chara/Chara_surprised.png"
-image Chara sad = "images/characters/Chara/Chara_sad.png"
-image Chara sad_smile = "images/characters/Chara/chara_sad_smile.png"
+    ##Image
+    image Chara despair = "images/characters/Chara/Chara_despair.png"
+    image Chara look_up = "images/characters/Chara/Chara_look_up.png"
+    image Chara surprised = "images/characters/Chara/Chara_surprised.png"
+    image Chara sad = "images/characters/Chara/Chara_sad.png"
+    image Chara sad_smile = "images/characters/Chara/chara_sad_smile.png"
 
-image Flowey worried = "images/characters/Flowey/flowey_worried.png"
-image Flowey look_away = "images/characters/Flowey/flowey_look_away.png"
-image Flowey happy_goat = "images/characters/Flowey/flowey_happy_goat.png"
-image Flowey sad = "images/characters/Flowey/flowey_sad.png"
+    image Flowey worried = "images/characters/Flowey/flowey_worried.png"
+    image Flowey look_away = "images/characters/Flowey/flowey_look_away.png"
+    image Flowey happy_goat = "images/characters/Flowey/flowey_happy_goat.png"
+    image Flowey sad = "images/characters/Flowey/flowey_sad.png"
 
-image bg_Ruins = "images/background/chapter_1/chapter_1-1/ruins.png"
-image bg_Ruins_no_flowey = "images/background/chapter_1/chapter_1-1/ruins_no_flowey.png"
+    image bg_Ruins = "images/background/chapter_1/chapter_1-1/ruins.png"
+    image bg_Ruins_no_flowey = "images/background/chapter_1/chapter_1-1/ruins_no_flowey.png"
+    image bg_White = im.Alpha("images/background/white.png",0.2)

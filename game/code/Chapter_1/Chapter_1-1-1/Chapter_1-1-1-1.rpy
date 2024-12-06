@@ -16,12 +16,8 @@ label chapter_1_1_1_1:
     call screen Fallenplacebg()
 
 label Wall_pressed:
-    $ renpy.block_rollback()
-    scene bg_Ruins
 
-    show white:
-        alpha 0.2 
-    pause 0.2
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True    
     Narration "* 與上方洞穴是同一種岩質，有水蝕的痕跡。"    
@@ -31,13 +27,8 @@ label Wall_pressed:
 
 label Circle_pressed:
 
-    $ renpy.block_rollback()
     $ persistent.Circle_click_count += 1
-    scene bg_Ruins
-
-    show white:
-        alpha 0.2 
-    pause 0.2
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True  
     if persistent.Circle_click_count == 1:
@@ -53,13 +44,8 @@ label Circle_pressed:
 
 label Tombstone_pressed:
 
-    $ renpy.block_rollback()
     $ persistent.Tombstone_click_count += 1
-    scene bg_Ruins
-
-    show white:
-        alpha 0.2 
-    pause 0.2
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True  
     if persistent.Tombstone_click_count == 1:
@@ -78,13 +64,8 @@ label Tombstone_pressed:
 
 label Flowerpile_pressed:
 
-    $ renpy.block_rollback()
     $ persistent.Flowerpile_click_count += 1
-
-    scene bg_Ruins
-    show white:
-        alpha 0.2 
-    pause 0.2
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True  
     if persistent.Flowerpile_click_count == 1:
@@ -109,13 +90,8 @@ label Flowerpile_pressed:
 
 label Pillar_pressed:
 
-    $ renpy.block_rollback()
     $ persistent.Pillar_click_count += 1
-
-    scene bg_Ruins
-    show white:
-        alpha 0.2 
-    pause 0.2
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True
     if persistent.Pillar_click_count == 1:
@@ -127,13 +103,9 @@ label Pillar_pressed:
 
 
 label Light_pressed:
-    $ renpy.block_rollback()
-    $ persistent.Light_click_count += 1
 
-    scene bg_Ruins
-    show white:
-        alpha 0.2 
-    pause 0.2
+    $ persistent.Light_click_count += 1
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True  
     if persistent.Light_click_count == 1:
@@ -147,13 +119,9 @@ label Light_pressed:
 #######fuck grass
 
 label Grass1_pressed:
-    $ renpy.block_rollback()
+    
     $ persistent.Grass1_click_count += 1
-
-    scene bg_Ruins
-    show white:
-        alpha 0.2 
-    pause 0.2
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True  
     if persistent.Grass1_click_count == 1:
@@ -168,13 +136,8 @@ label Grass1_pressed:
 
 label Grass2_pressed:
 
-    $ renpy.block_rollback()
     $ persistent.Grass2_click_count += 1
-
-    scene bg_Ruins
-    show white:
-            alpha 0.2 
-    pause 0.2
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True  
     if persistent.Grass2_click_count == 1:
@@ -188,13 +151,9 @@ label Grass2_pressed:
 
 
 label Grass3_pressed:
-    $ renpy.block_rollback()
-    $ persistent.Grass3_click_count += 1
 
-    scene bg_Ruins
-    show white:
-            alpha 0.2 
-    pause 0.2
+    $ persistent.Grass3_click_count += 1
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True  
     if persistent.Grass3_click_count == 1:
@@ -207,13 +166,10 @@ label Grass3_pressed:
     jump chapter_1_1_1_1
 
 label Grass4_pressed:
-    $ renpy.block_rollback()
-    $ persistent.Grass4_click_count += 1
 
-    scene bg_Ruins
-    show white:
-            alpha 0.2 
-    pause 0.2
+    $ persistent.Grass4_click_count += 1
+    $ bgOfDialogue("bg_Ruins")
+
     $ quick_menu = True  
     if persistent.Grass4_click_count == 1:
         Narration "* 淺灰色小草，沾了些許晶瑩剔透的水珠。"
@@ -225,12 +181,8 @@ label Grass4_pressed:
     jump chapter_1_1_1_1
 
 label eye_pressed:
-    $ renpy.block_rollback()
-
-    scene bg_Ruins
-    show white:
-            alpha 0.2 
-    pause 0.2
+    
+    $ bgOfDialogue("bg_Ruins")
 
     $ quick_menu = True 
     Narration "* 還沒做好哈哈哈哈"

@@ -128,7 +128,7 @@ label Flowey_pressed:
         Flowey "* 「呃......你看起來有點糟糕。」"
         Flowey "* 「需要幫忙嗎？」"  
 
-    elif persistent.Flowey_click_count == 3 or persistent.Flowey_click_count == 4 :
+    elif persistent.Flowey_click_count == 3 or persistent.Flowey_click_count == 4:
         $ renpy.block_rollback()
         "* 「嗯？」"
 

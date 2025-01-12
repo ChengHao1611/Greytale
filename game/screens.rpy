@@ -327,8 +327,9 @@ screen navigation():
             textbutton _("結束回想") action EndReplay(confirm=True)
 
         elif not main_menu:
-
-            textbutton _("標題畫面") action MainMenu(True,False)
+            textbutton _("標題畫面") action Jump("main_menu")
+            $ main_menu = True
+            #textbutton _("標題畫面") action MainMenu(True,False)
 
         #textbutton _("關於") action ShowMenu("about")
 

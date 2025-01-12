@@ -1,4 +1,3 @@
-# 您可以在此編寫遊戲的腳本。
 default persistent.Flowey_click_count = 0
 default persistent.isLeaveChapter_1_1_1 = False
 default persistent.Flowey_unappear = False

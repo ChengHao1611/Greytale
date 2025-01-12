@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/code/Function.rpy", line 10: invalid syntax
-        renpy.show("white", at_list=[renpy.alpha = 0.2])
-                                                  ^
+File "game/screens.rpy", line 331: 'main_menu' is not a keyword argument or valid child of the vbox statement.
+    main_menu = True
+             ^
+
+File "game/script.rpy", line 14: end of line expected.
+    jump screen main_menu()
+                ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Dec  6 21:56:59 2024
+Sun Jan 12 22:41:05 2025

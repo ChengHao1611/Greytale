@@ -1,18 +1,17 @@
 ﻿# 您可以在此編寫遊戲的腳本。
 
 
-#default enterGame = 0  #猜測回到標題畫面default會再跑一次
+default enterGame = 0  #猜測回到標題畫面default會再跑一次
 
-# label main_menu:
-#     #screen main_menu
-#     "enterGame = [enterGame]"
-#     if enterGame == 0:
-#         "恭喜你成功了"
-#         "嘿嘿"
-#     $ enterGame += 1
-#     "enterGame = [enterGame]"
-#     call screen main_menu()
-#     return
+label main_menu:
+    #screen main_menu
+    #"enterGame = [enterGame]"
+    if enterGame == 0:
+        "恭喜你成功了"
+        "嘿嘿"
+    $ enterGame = 1
+    #"enterGame = [enterGame]"
+    call screen main_menu()
 
 
 # 遊戲從這裡開始。
